@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'salesforce',
     'api_management.category',
     'api_management.product',
+    'api_management.user',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
+
+AUTH_USER_MODEL = 'user.CustomUser'
