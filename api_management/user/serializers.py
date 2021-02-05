@@ -17,11 +17,11 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         return instance
 
     def update(self,instance,validated_data):
-        for key,value in validated_data.items():
-            if key == 'password':
+        for attr,value in validated_data.items():
+            if attr == 'password':
                 instance.set_password(value)
             else:
-                setattr(instance,key,value)
+                setattr(instance,attr,value)
         
         instance.save()
         return instance
