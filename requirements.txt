@@ -6,6 +6,7 @@ chardet==4.0.0
 cryptography==3.3.1
 Django==3.1.6
 django-cors-headers==3.7.0
+django-crontab==0.7.1
 django-salesforce==3.1
 djangorestframework==3.12.2
 idna==2.10

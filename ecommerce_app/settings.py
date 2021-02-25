@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'api_management.product',
     'api_management.user',
     'api_management.order',
+    'api_management.payment',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -167,4 +169,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+]
+
+CRONJOBS = [
+    ('*/1 * * * *', 'api_management.product.cron.my_cron_job')
 ]
